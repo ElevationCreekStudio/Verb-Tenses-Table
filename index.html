@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verb Tenses Table</title>
+  <meta name="description" content="Interactive chart of Verb Tenses in American English">
+  <link rel="icon" type="image/png" href="./images/icons/icon-192x192.png" />
+  <link rel="stylesheet" href="./css/main.css">
+  
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <!-- Основная таблица с тремя временами -->
+  <table>
+    <thead><tr><th>?</th><th>+</th><th>-</th></tr></thead>
+    <tbody>
+      <!-- Будущее время -->
+      <tr>
+        <td id="td_fut_q"></td>
+        <td id="td_fut_pos"></td>
+        <td id="td_fut_neg"></td>
+      </tr>
+      <!-- Настоящее время -->
+      <tr>
+        <td id="td_pres_q"></td>
+        <td id="td_pres_pos"></td>
+        <td id="td_pres_neg"></td>
+      </tr>
+      <!-- Прошедшее время -->
+      <tr>
+        <td id="td_past_q"></td>
+        <td id="td_past_pos"></td>
+        <td id="td_past_neg"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Контейнер с элементами управления -->
+  <div class="controls">
+    <!-- Выбор глагола -->
+    <select id="verbSelect"></select>
+
+    <!-- Переключатель правильных / неправильных глаголов -->
+    <div class="toggle-wrapper">
+      <span>Regular</span>
+      <label class="switch">
+        <input type="checkbox" id="fileToggle">
+        <span class="slider"></span>
+      </label>
+      <span>Irregular</span>
+    </div>
+
+    <!-- Переключатель групп времён (2×2) -->
+    <div class="tense-grid">
+      <label>
+        <input type="radio" name="tense-group" value="simple" checked>
+        <span class="tense-btn">Simple</span>
+      </label>
+      <label>
+        <input type="radio" name="tense-group" value="progressive">
+        <span class="tense-btn">Continuous</span>
+      </label>
+      <label>
+        <input type="radio" name="tense-group" value="perfect">
+        <span class="tense-btn">Perfect</span>
+      </label>
+      <label>
+        <input type="radio" name="tense-group" value="perfect-progressive">
+        <span class="tense-btn">Perfect Continuous</span>
+      </label>
+    </div>
+    <!-- Кнопка озвучки (транскрипция) -->
+    <button id="speakBtn" title="Pronounce the verb"></button>
+  </div>
+  
+  <!-- Служебный элемент: показывает временные всплывающее уведомления
+  для любых сообщений, скрыт по умолчанию -->
+  <div id="speechMessage" class="speech-message"></div>
+
+  <script src="./js/renders.js"></script>
+  <script src="./js/main.js"></script>
+  
+  <script src="./js/app.js"></script>
+</body>
+</html>
