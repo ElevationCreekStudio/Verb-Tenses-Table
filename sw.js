@@ -7,8 +7,8 @@ const ASSETS = [
   './js/renders.js',
   './verbs/verbs_irregular.json',
   './verbs/verbs_regular.json',
-  './icon-192x192.png',
-  './icon-512x512.png'
+  './images/icons/icon-192x192.png',
+  './images/icons/icon-512x512.png'
 ];
 
 // Событие установки воркера
